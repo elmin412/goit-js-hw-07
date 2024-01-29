@@ -19,17 +19,21 @@ function createBoxes(amount) {
   }
 }
 
-function destroyBoxes() {
-  boxesContainer.innerHTML = "";
-}
+function createAndDestroy() {
+  destroyBoxes();
 
-createButton.addEventListener("click", () => {
   const amount = parseInt(input.value);
 
   if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
     input.value = '';
-  } 
-});
+  }
+}
 
+function destroyBoxes() {
+  boxesContainer.innerHTML = "";
+}
+
+createButton.addEventListener("click", createAndDestroy);
 destroyButton.addEventListener("click", destroyBoxes);
+

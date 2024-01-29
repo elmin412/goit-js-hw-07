@@ -9,10 +9,13 @@ function formHandler(event) {
 
   if (data.email === "" || data.password === "") {
     alert("All form fields must be filled in");
+    return;
   }
 
   console.log(data);
   form.reset();
 }
 
-form.addEventListener("submit", formHandler);
+form.addEventListener("submit", formHandler); {
+  
+}
